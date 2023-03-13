@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+main {
   font-family: 'Outfit', sans-serif;
   background-color: hsl(217, 54%, 11%);
   min-height: 100vh;
