@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  background-color: hsl(233, 47%, 7%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  display: flex;
+  margin: 2rem;
+}
+
+picture {
+  display: block;
+  position: relative;
+}
+
+picture::before {
+  content: "";
+  position: absolute;
+  background-color: hsl(277, 100%, 41%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.4;
+}
+
+.main-image {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+content {
+  padding: 5.5rem;
+  padding-right: 8rem;
+}
+
+h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.2em;
+}
+
+h1 > span {
+  color: hsl(277, 64%, 61%);
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 400;
+  line-height: 1.7em;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat > span:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.stat > span:nth-child(2) {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1220px) {
+  br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    flex-direction: column-reverse;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  content {
+    padding: 3rem;
+  }
+
+  .stat {
+    gap: 0.25rem;
+  }
+
+  .stat > span:first-child {
+    font-size: 1.8rem;
+  }
+
+  .stat > span:nth-child(2) {
+    font-size: 0.8rem;
+  }
+}
